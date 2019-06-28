@@ -1,0 +1,8 @@
+node_modules
+
+dist
+
+# debugging
+.vscode
+
+package-lock.json

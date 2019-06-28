@@ -1,0 +1,29 @@
+{
+  "name": "caldav-client-typescript",
+  "version": "0.0.1",
+  "description": "nodejs caldav client with typescript",
+  "main": "server.js",
+  "keywords": [
+    "caldav",
+    "nodejs",
+    "express",
+    "typescript"
+  ],
+  "author": "Ulrich Tiofack",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "tsc && node ./dist/server.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ical.js": "^1.1.2",
+    "moment": "^2.12.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "typescript": "^3.5.2"
+  },
+  "license": "MIT"
+}
