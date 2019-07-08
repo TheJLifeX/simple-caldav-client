@@ -28,12 +28,31 @@ calendarClient.getEvents(startDate).then((calendarEvents) => {
 ```
 ## API
 
-- **CalendarClient.getEvents**
-   Get events from startDate up to optional endDate. if you don't enter a endDate, if will return all events from startDate.
 ```ts
+/**
+ * Get events from `startDate` up to optional `endDate`.
+ * if you don't enter a endDate, if will return all events from `startDate`.
+ */
 CalendarClient.getEvents(startDate: Date, endDate?: Date): Promise<CalendarEvent[]>
 ```
-- **CalendarEvent**
+
+```ts
+/**
+ * if the event already exits - it means same `event.uid` - the event will be updated
+ * else it will be added.
+ * @param event - the event you want to add or update.
+ */
+CalendarClient.addOrUpdateEvent(event: CalendarEvent): Promise<void>
+```
+
+```ts
+/**
+ * Remove the event in caldav server with the same uid like `event`.
+ * @param event - the event you want to remove.
+ */
+CalendarClient.removeEvent(event: CalendarEvent): Promise<void>
+```
+
 ```ts
 export interface CalendarEvent {
     /**
