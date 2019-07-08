@@ -26,7 +26,7 @@ export class CalendarClient {
      * Get events from `startDate` up to optional `endDate`.
      * if you don't enter a endDate, if will return all events from `startDate`.
      */
-    public getEvents(startDate: Date, endDate?: Date) {
+    public getEvents(startDate: Date, endDate?: Date): Promise<CalendarEvent[]> {
         return this.calDAVService.getEvents(this.calendarUrl, this.username, this.password, startDate, endDate);
     }
 

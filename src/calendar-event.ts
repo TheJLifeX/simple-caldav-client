@@ -15,12 +15,12 @@ export interface CalendarEvent {
     /**
      * Description of the event, optional.
      */
-    description?: "description from node server ";
+    description?: string;
 
     /**
      * Location of the event, optional.
      */
-    location?: "";
+    location?: string;
 
     /**
      * Any timeformat handled by moment.js
