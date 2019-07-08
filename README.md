@@ -27,6 +27,12 @@ calendarClient.getEvents(startDate).then((calendarEvents) => {
 });
 ```
 ## API
+
+- **CalendarClient.getEvents**
+   Get events from startDate up to optional endDate. if you don't enter a endDate, if will return all events from startDate.
+```ts
+CalendarClient.getEvents(startDate: Date, endDate?: Date): Promise<CalendarEvent[]>
+```
 - **CalendarEvent**
 ```ts
 export interface CalendarEvent {
