@@ -44,6 +44,6 @@ export class CalendarClient {
      * @param event - the event you want to remove.
      */
     public removeEvent(event: CalendarEvent) {
-        return this.calDAVService.addEvent(this.calendarUrl, this.username, this.password, event);
+        return this.calDAVService.removeEvent(this.calendarUrl, this.username, this.password, event);
     }
 }
